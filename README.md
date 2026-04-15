@@ -38,3 +38,8 @@ Du an nay doc nhiet do tu cam bien LM35 bang Arduino, gui du lieu qua Serial va 
 ## Thanh vien nhom
 
 - Pham Ngoc Quang Huy - MSSV N23DCCI034 - Lop D23CQCI01-N
+
+## Tac gia
+
+- Portfolio: https://huyhuyhuy1999.github.io/
+- GitHub: https://github.com/huyhuyhuy1999
