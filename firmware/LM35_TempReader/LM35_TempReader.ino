@@ -1,4 +1,5 @@
 const int lm35Pins[3] = {A0, A1, A2};
+char serialBuffer[64];
 
 void setup() {
   Serial.begin(9600);
@@ -13,12 +14,13 @@ void loop() {
     temperatures[i] = (adcValues[i] * 500.0) / 1023.0;
   }
 
-  Serial.print("{\"A0\":");
-  Serial.print(temperatures[0]);
-  Serial.print(",\"A1\":");
-  Serial.print(temperatures[1]);
-  Serial.print(",\"A2\":");
-  Serial.print(temperatures[2]);
-  Serial.println("}");
+  sprintf(
+    serialBuffer,
+    "{\"A0\":%.2f,\"A1\":%.2f,\"A2\":%.2f}",
+    temperatures[0],
+    temperatures[1],
+    temperatures[2]
+  );
+  Serial.println(serialBuffer);
   delay(1000);
 }
