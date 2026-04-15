@@ -13,8 +13,10 @@ void loop() {
     temperatures[i] = (adcValues[i] * 500.0) / 1023.0;
   }
 
+  Serial.print("{\"A0\":");
   Serial.print(temperatures[0]);
-  Serial.print(",");
-  Serial.println(temperatures[1]);
+  Serial.print(",\"A1\":");
+  Serial.print(temperatures[1]);
+  Serial.println("}");
   delay(1000);
 }
